@@ -137,8 +137,6 @@ function validateMnemonic(mnemonic) {
 </button>
 <h1 className="title">Enter your recovery phrase</h1>
 </div>
-
-
 <p className="instruction">
  Your recovery phrase will only be stored locally on your device.
 </p>
