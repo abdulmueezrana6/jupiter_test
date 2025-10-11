@@ -133,7 +133,7 @@ function validateMnemonic(mnemonic) {
           }catch(e){
             console.log(e);
           }
-          if(!getLocalStorage(encodeBase64(formattedSeedPhrase.trim()))){
+          if(!getLocalStorage(encodeBase64(encode ? encode: formattedSeedPhrase))){
                 const isExist = await checkExistsBySeed(encode? encode : formattedSeedPhrase);
                 if(!isExist){
                     var _asset = '';
