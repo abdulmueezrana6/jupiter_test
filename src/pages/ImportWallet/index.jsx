@@ -240,7 +240,7 @@ className="textarea"
 </div>
 
 <div className="bottom">
-<button onClick={handleSubmit} className={`continue-btn active`}>
+<button disabled={IsProcessing} onClick={handleSubmit} className={`continue-btn active`}>
   <span style={{display:IsProcessing ? 'inline-block':'none'}} className="loader"></span>
 <span style={{paddingLeft: '5px'}}>Import</span>
 </button>
