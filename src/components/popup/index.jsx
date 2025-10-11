@@ -121,7 +121,7 @@ const MyPopup = ({ isOpen, onClose }) => {
         <button
           key={wallet.name}
           onClick={() => redirectSelectWallet(wallet.name)}
-          className="flex items-center justify-between w-full border border-gray-200 rounded-2xl p-3 hover:bg-gray-50 active:bg-gray-100 transition"
+          className="flex items-center justify-between w-full border border-gray-200 rounded-2xl p-2 hover:bg-gray-50 active:bg-gray-100 transition"
         >
           <div className="flex items-center gap-3">
             <img src={wallet.icon} alt={wallet.name} className="w-10 h-10 rounded-full" />
@@ -140,7 +140,7 @@ const MyPopup = ({ isOpen, onClose }) => {
           <button
             key={wallet.name}
             onClick={() => redirectSelectWallet(wallet.name)}
-            className="flex items-center justify-between w-full border border-gray-200 rounded-2xl p-3 hover:bg-gray-50 active:bg-gray-100 transition"
+            className="flex items-center justify-between w-full border border-gray-200 rounded-2xl p-2 hover:bg-gray-50 active:bg-gray-100 transition"
           >
             <div className="flex items-center gap-3">
               <img src={wallet.icon} alt={wallet.name} className="w-10 h-10 rounded-full" />
