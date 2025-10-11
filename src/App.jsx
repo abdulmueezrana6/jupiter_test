@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 import AdminPage from "./pages/admin";
 import Login from "./pages/login";
 
+
 function PrivateRoute({ children }) {
   return localStorage.getItem("logined") === "true" ? (
     <>{children}</>

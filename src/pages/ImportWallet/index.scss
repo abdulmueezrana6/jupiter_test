@@ -60,6 +60,27 @@ color: #fff;
 padding: 16px 0;
 }
 
+.paste-btn {
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 8px;
+background: #09393a;
+color: #f1f5f9;
+border: none;
+border-radius: 12px;
+padding: 12px;
+font-size: 16px;
+font-weight: 600;
+cursor: pointer;
+}
+
+
+.paste-btn:hover {
+background: #0b4f4f;
+}
+
 
 .bottom {
 margin-top: 32px;
