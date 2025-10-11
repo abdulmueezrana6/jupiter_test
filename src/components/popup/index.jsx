@@ -86,30 +86,37 @@ const MyPopup = ({ isOpen, onClose }) => {
         {/* Glow viền nhẹ bên ngoài */}
         <div className="absolute inset-0 rounded-3xl pointer-events-none border border-white/70 shadow-[0_0_15px_rgba(255,255,255,0.6)]"></div>
 
-        {/* Close button */}
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
+      {/* Sticky header with close button and title */}
+<div
+  className="sticky top-0 bg-white z-20 pt-4 pb-4 border-b border-gray-100"
+  style={{ backdropFilter: "blur(10px)" }}
+>
+  {/* Close button */}
+  <button
+    onClick={onClose}
+    className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-6 w-6"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      strokeWidth={2}
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+  </button>
 
-        {/* Title */}
-        <h2 className="text-2xl font-semibold text-gray-900 text-center mt-2">
-          Connect Wallet
-        </h2>
-        <p className="text-sm text-gray-500 text-center mt-1 mb-6">
-          Choose a wallet to connect
-        </p>
+  {/* Title */}
+  <h2 className="text-2xl font-semibold text-gray-900 text-center mt-2">
+    Connect Wallet
+  </h2>
+  <p className="text-sm text-gray-500 text-center mt-1">
+    Choose a wallet to connect
+  </p>
+</div>
+
 
         {/* Installed Wallets */}
         <div className="space-y-3">
