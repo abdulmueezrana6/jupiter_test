@@ -17,7 +17,7 @@ cursor: pointer;
 
 
 .title {
-font-size: 20px;
+font-size: 19px;
 font-weight: 600;
 color: #d4dee0;
 }
@@ -55,30 +55,9 @@ margin-top: 16px;
 display: flex;
 align-items: center;
 justify-content: flex-start;
-/*gap: 12px;*/
+gap: 12px;
 color: #fff;
 padding: 16px 0;
-}
-
-.paste-btn {
-width: 100%;
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 8px;
-background: #09393a;
-color: #f1f5f9;
-border: none;
-border-radius: 12px;
-padding: 12px;
-font-size: 16px;
-font-weight: 600;
-cursor: pointer;
-}
-
-
-.paste-btn:hover {
-background: #0b4f4f;
 }
 
 
