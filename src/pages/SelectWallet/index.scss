@@ -1,0 +1,310 @@
+
+.hideScrollbar::-webkit-scrollbar {
+    display: none
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none
+}
+
+.webkit-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px
+}
+
+.webkit-scrollbar::-webkit-scrollbar-thumb {
+    margin: 2px;
+    border-radius: 10px;
+    background: #ebedf0
+}
+
+.dark .webkit-scrollbar::-webkit-scrollbar-thumb {
+    background: #313136
+}
+
+.webkit-scrollbar::-webkit-scrollbar-track {
+    border-radius: 10px
+}
+
+.webkit-scrollbar::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(0, 0, 0, .25)
+}
+
+.css-1vx73dy {
+    left: 0px;
+    top: 0px;
+    z-index: 50;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    animation: 0.15s ease-in-out 0s 1 normal none running fade-in;
+    cursor: auto;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.25);
+    --tw-backdrop-blur: blur(4px);
+    backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+.css-1pt1vl2 {
+    position: relative;
+    display: flex;
+    max-height: 90vh;
+    width: 100%;
+    max-width: 28rem;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    transition-property: height;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+    --tw-bg-opacity: 1;
+    background-color: rgb(49 62 76 / var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.css-1km4atu {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 1.5rem 1.25rem;
+    line-height: 1;
+}
+
+.css-16ceglb {
+    font-weight: 600;
+}
+
+.css-df9rzr {
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.css-1o7lixs {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+.css-1ng0ss1 {
+    border-top-width: 1px;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.css-1ip09mz {
+    position: relative;
+    height: 100%;
+    overflow-y: auto;
+    padding: 0.75rem 1.25rem 2rem;
+}
+
+.css-1xwazdk {
+    position: relative;
+    height: 100%;
+    overflow-y: auto;
+    padding: 0.75rem 1.25rem 2rem;
+    margin-bottom: 1.75rem;
+}
+
+.css-eojnhe {
+    margin-top: 1.5rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 600;
+}
+
+@media (min-width: 1024px) {
+    .css-18u6ey2 {
+        flex-direction: row !important;
+    }
+
+    .css-1td7ub7 {
+        max-width: 33%;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        justify-content: center;
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+
+    .css-1l38ei2 {
+        margin-left: 0px !important;
+        margin-top: 0.75rem !important;
+    }
+
+    .css-1pt1vl2 {
+        max-height: 576px;
+    }
+
+    .css-18u6ey2> :not([hidden])~ :not([hidden]) {
+        --tw-space-x-reverse: 0;
+        margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+        margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+        --tw-space-y-reverse: 0 !important;
+        margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse))) !important;
+        margin-bottom: calc(0px * var(--tw-space-y-reverse)) !important;
+    }
+}
+
+.css-18u6ey2> :not([hidden])~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
+.css-18u6ey2 {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.css-1td7ub7 {
+    display: flex;
+    flex: 1 1 0%;
+    cursor: pointer;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.css-k19fg7 {
+    object-fit: contain;
+}
+
+.css-1l38ei2 {
+    margin-left: 1rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 600;
+}
+
+.css-vambv7 {
+    margin-top: 1.25rem;
+    display: flex;
+    cursor: pointer;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.css-1ide98v {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 600;
+}
+
+.css-s5xdrg {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.css-f47xmg {
+    height: 6px;
+    width: 10px;
+}
+
+.css-1m6uyyj {
+    overflow: hidden;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+    animation: 0.15s ease-out 0s 1 normal none running fade-out;
+}
+
+.css-wlsnmg {
+    overflow: hidden;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+    animation: 0.15s ease-in-out 0s 1 normal none running fade-in;
+}
+
+.css-1rigx3j {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0px, 1fr));
+    gap: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+.css-19rqjni {
+    display: flex;
+    cursor: pointer;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem 1.25rem;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.css-19rqjni> :not([hidden])~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1.25rem * var(--tw-space-x-reverse));
+    margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.css-18g8lgp {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 600;
+}
+
+.css-k19fg7 {
+    object-fit: contain;
+}
+
+.css-15s9zgf {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 600;
+    text-decoration-line: underline;
+    margin-bottom: 2rem;
+}
+
+.css-ms0594 {
+    margin-bottom: -0.5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration-line: underline;
+}
+
+.css-czicsy {
+    position: absolute;
+    bottom: 1.75rem;
+    left: 0px;
+    z-index: 50;
+    display: block;
+    height: 5rem;
+    width: 100%;
+    pointer-events: none;
+    background-image: linear-gradient(to top, var(--tw-gradient-stops));
+    --tw-gradient-from: rgb(49, 62, 76) var(--tw-gradient-from-position);
+    --tw-gradient-to: transparent var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}

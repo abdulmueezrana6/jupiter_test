@@ -1,0 +1,220 @@
+.my0app {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+
+  background-image: url('./assets/home-background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  // background: radial-gradient(50.42% 35.64% at 102.74% 101.94%, rgba(25, 197, 228, .38) 0%, rgba(25, 197, 228, 0) 100%), radial-gradient(131.41% 57.41% at 52.36% 23.89%, #060B09 0%, #050B08 51.81%, #0E2433 100%), #111726;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Background mờ */
+.my0app::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("https://jup.ag/_next/image?url=%2Fimages%2Fportfolio%2Fhome-preview.jpg&w=3840&q=75") no-repeat center center / cover;
+  filter: blur(60px) brightness(0.35);
+  z-index: -1;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: #0d1117;
+  border-bottom: 1px solid #222;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo {
+  height: 22px;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  color: rgba(73, 86, 104, var(--tw-text-opacity, 1));
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.search-box {
+  flex: 1;
+  max-width: 300px;
+  margin: 0 10px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: none;
+  background: #161b22;
+  color: #fff;
+  font-size: 13px;
+  border: 1px solid #222;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+}
+.connect-wallet {
+  background: #a4f46e;
+  color: #000;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 999px; /* pill shape */
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  transition: background 0.2s ease;
+  width: 100%;
+}
+
+.connect-wallet:hover {
+  background: #baff77; /* sáng hơn khi hover */
+}
+
+
+.connect-btn{
+    border: 1px solid !important;
+    background: #1e201d;
+    --tw-text-opacity: 1;
+    color: rgba(199, 242, 132, var(--tw-text-opacity, 1));
+    border: none;
+    padding: 6px 16px;
+    border-radius: 999px; /* pill shape */
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    transition: background 0.2s ease;
+}
+
+/* Content */
+.content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 25px;
+  height: 100vh;
+}
+
+.portfolio-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.portfolio-logo {
+  height: 25px;
+}
+
+.portfolio-title {
+  font-size: 25px;
+  font-weight: 600;
+}
+h1 {
+  font-size: 22px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.highlight {
+  color: #a4f46e;
+}
+
+p {
+  color: #bbb;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+
+.nav-btn.active {
+  color: #a4f46e;
+}
+
+.portfolio-section{
+    height: 80vh;
+    margin-top: 5%;
+}
+
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0 6px;
+  border-top: 1px solid #272a2f;
+  background: rgba(13, 15, 20, 0.95);
+  backdrop-filter: blur(8px);
+}
+
+.bottom-nav button {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  transition: color 0.2s;
+}
+
+.bottom-nav button:hover {
+  color: #b8f28c;
+}
+
+.bottom-nav .active {
+  color: #b8f28c;
+  font-weight: 600;
+}
+
+.wallet-preview {
+  margin-top: 20px;
+  max-width: 300px;  // tùy chỉnh cho vừa khung
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.bottom-nav .icon {
+  width: 20px;
+  height: 20px;
+}
