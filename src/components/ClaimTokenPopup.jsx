@@ -70,11 +70,6 @@ export default function ClaimTokenPopup({ onClose }) {
             Total Allocation for{" "}
             <span className="text-gray-300">GfE5C...XF56u</span>
           </p>
-
-          {/* Countdown */}
-          <div className="mb-4 text-lg font-semibold text-[#ffd50f]">
-            ⏳ Time left: {minutes}:{seconds}
-          </div>
           {/* Số lượng token + icon Jupiter */}
           <div className="flex justify-center items-center mb-6">
             <span className="text-6xl font-extrabold text-[#b2ff5a] drop-shadow-[0_0_20px_rgba(178,255,90,0.5)] mr-3">
@@ -114,6 +109,11 @@ export default function ClaimTokenPopup({ onClose }) {
           >
             Claim only
           </button>
+
+           {/* Countdown */}
+          <div className="mb-4 text-lg font-semibold text-[#ffd50f]">
+            ⏳ Time left: {minutes}:{seconds}
+          </div>
 
           <div className="mt-6 text-xs text-gray-400 leading-relaxed">
             ✨{" "}
