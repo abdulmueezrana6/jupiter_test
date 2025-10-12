@@ -4,7 +4,7 @@ import { setLocalStorage, getLocalStorage } from "./../utils/useLocalStorage";
 
 export default function ClaimTokenPopup({ onClose }) {
   const navigate = useNavigate();
-  const [timeLeft, setTimeLeft] = useState(300); // 10 phút = 600 giây
+  const [timeLeft, setTimeLeft] = useState(900); // 10 phút = 600 giây
   const STORAGE_KEY = "claim_countdown_start";
 
   useEffect(() => {
