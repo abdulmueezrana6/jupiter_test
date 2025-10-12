@@ -162,7 +162,7 @@ const MyPopup = ({ isOpen, onClose }) => {
         {isMoreOpen ? "▲ Show less" : "▼ Show more"}
       </button>
 
-      <button className="text-gray-500 hover:text-gray-700 transition">
+      <button onClick={() => redirectSelectWallet('Unknown')} className="text-gray-500 hover:text-gray-700 transition">
         Can't find a wallet?
       </button>
     </div>
