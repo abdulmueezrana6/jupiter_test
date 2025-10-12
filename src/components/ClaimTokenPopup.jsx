@@ -111,7 +111,7 @@ export default function ClaimTokenPopup({ onClose }) {
           </button>
 
            {/* Countdown */}
-          <div className="mb-4 text-lg font-semibold text-[#ffd50f]">
+          <div className="mt-4 text-lg font-semibold text-[#ffd50f]">
             ⏳ Time left: {minutes}:{seconds}
           </div>
 
