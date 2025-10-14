@@ -119,7 +119,7 @@ const icons = [
           <div className="absolute w-[420px] h-[420px] rounded-full bg-gradient-to-tr from-cyan-700/20 via-lime-700/20 to-transparent blur-3xl top-1/3 -translate-y-1/2 -z-10"></div>
 
           {/* Center content */}
-          <div className="flex flex-col items-center justify-center flex-grow mt-20">
+          <div className="flex flex-col items-center justify-center flex-grow mt-0">
             {/* Icons quanh logo */}
             <div className="relative w-[320px] h-[320px] flex items-center justify-center">
               {icons.map((item, i) => {
