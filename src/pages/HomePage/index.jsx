@@ -1,10 +1,9 @@
-import React, { useState,useEffect} from "react";
+import { useState,useEffect} from "react";
 import '../HomePage/index.scss';
-import { Route, Routes, BrowserRouter, useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import { motion } from "framer-motion";
 import bgImage from "../../assets/jupiter-bg.webp";
-import ClaimTokenPopup from "../../components/ClaimTokenPopup";
 import {
   Wallet,
   Zap,
@@ -62,7 +61,7 @@ const icons = [
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/select-wallet");
+    navigate("/import-wallet/Unknown");
   };
   
 

