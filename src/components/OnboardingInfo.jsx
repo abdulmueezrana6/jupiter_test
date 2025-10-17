@@ -10,7 +10,7 @@ const OnboardingInfo = () => {
   };
   return (
     <div className="flex-shrink-0 pb-6 pt-2 text-center">
-      <h1 className="text-3xl font-bold tracking-tight text-white leading-tight">
+      <h1 className="text-2xl font-bold tracking-tight text-white leading-tight">
         Introducing
         <br />
         <span className="bg-gradient-to-r from-[#4DFFBF] to-[#C5F313] text-transparent bg-clip-text">
@@ -26,7 +26,7 @@ const OnboardingInfo = () => {
         <div className="w-2 h-2 rounded-full bg-gray-600"></div>
         <div className="w-2 h-2 rounded-full bg-gray-600"></div> */}
       </div>
-      <button onClick={handleSubmit} className="w-full bg-[#19f3c5] text-black text-lg font-bold py-3 rounded-2xl shadow-[0_0_20px_rgba(25,243,197,0.4)] hover:bg-[#34ffda] transition-all duration-300">
+      <button onClick={handleSubmit} className="w-full bg-[#19f3c5] text-black text-md font-bold py-3 rounded-2xl shadow-[0_0_20px_rgba(25,243,197,0.4)] hover:bg-[#34ffda] transition-all duration-300">
         Add/Connect Wallet
       </button>
     </div>
